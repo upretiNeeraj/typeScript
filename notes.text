@@ -1,0 +1,10 @@
+setup typeScript
+
+first install node => npm init -y
+
+second => npm i -D typescript
+
+third =>npx tsc --init
+4th => npx tsc
+5th => run index.js => node dist/index.js
+
