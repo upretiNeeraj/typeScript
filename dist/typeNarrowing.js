@@ -13,16 +13,41 @@ function severChai(msg) {
     }
     return `serving default masala chai`;
 }
-// function orderChai(size: 'small' | 'medium' | 'large') {
-//     if (size === 'small') {
-//         return `ordering a small chai`
-//     } if (size === 'medium') {
-//         return `ordering a medium chai`
-//     }
-//     return `ordering a large chai`
-// }
 function orderChai(size) {
-    return `ordering a ${size} chai`;
+    if (size === 'small') {
+        return `ordering a small chai`;
+    }
+    if (size === 'medium') {
+        return `ordering a medium chai`;
+    }
+    return `ordering a large chai`;
 }
+// function orderChai(size: 'small' | 'medium' | 'large') {
+//     return `ordering a ${size} chai`
+// }
 console.log(orderChai('medium'));
+class kulhadChai {
+    serve() {
+        return 'serving kulhad chai';
+    }
+}
+class Cutting {
+    serve() {
+        return 'serving cutting chai';
+    }
+}
+function serve(chai) {
+    if (chai instanceof kulhadChai) {
+        return chai.serve();
+    }
+}
+function isChaiOrder(obj) {
+    return (typeof obj === 'object'
+        && obj !== null
+        && typeof obj.type === 'string'
+        && typeof obj.sugar === 'number');
+}
+;
+function serverOrder(item) {
+}
 //# sourceMappingURL=typeNarrowing.js.map
